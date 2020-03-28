@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<ul>
+{% for puppy in puppies%}
+    <li>{{puppy}}</li>
+    <li><a href="{{url_for('delete',_id=puppy.id)}}">delete</a></li>
+    <li><a href="{{url_for('update' , _id = puppy.id)}}">updatee</a></li>
+    {%endfor%}
+    </ul>
+<button><a href="url_for('delete_all')">delete all</a></button>
+</body>
+</html>
