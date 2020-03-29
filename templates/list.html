@@ -5,13 +5,19 @@
     <title>List</title>
 </head>
 <body>
-<ul>
+<table>
 {% for puppy in puppies%}
-    <li>{{puppy}}</li>
-    <li><a href="{{url_for('delete',_id=puppy.id)}}">delete</a></li>
-    <li><a href="{{url_for('update' , _id = puppy.id)}}">updatee</a></li>
+    <tr>
+    <td>{{puppy.name}}</td>
+        <td>
+        <form method="post">
+            <a href="{{url_for('delete',_id=puppy.id)}}">delete</a>
+            <a href="{{url_for('update' , _id = puppy.id)}}">update</a>
+        </form>
+        </td>
+    </tr>
     {%endfor%}
-    </ul>
-<button><a href="url_for('delete_all')">delete all</a></button>
+    </table>
+<button><a href="{{url_for('delete_all')}}">delete all</a></button>
 </body>
 </html>

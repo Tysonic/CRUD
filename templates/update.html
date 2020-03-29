@@ -5,11 +5,12 @@
     <title>Update</title>
 </head>
 <body>
-<h3>Add a puppy</h3>
+<h3>Update Record</h3>
 
 <form method="post">
+    {{form.hidden_tag()}}
     {{form.name.label}}
-    {{form.name()}
+    {{form.name()}}
     {{form.update()}}
 </form>
 </body>

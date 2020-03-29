@@ -8,8 +8,9 @@
 <h3>Add a puppy</h3>
 
 <form method="post">
+    {{form.hidden_tag()}}
     {{form.name.label}}
-    {{form.name()}
+    {{form.name()}}
     {{form.submit()}}
 </form>
 </body>
